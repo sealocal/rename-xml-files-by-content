@@ -3,7 +3,7 @@
 This is a Ruby script that allows you to rename your XML files based on content inside the file.
 
 
-###For Example:
+##Use Case Scenario:
 
 You have multiple files named like:
 
@@ -16,6 +16,9 @@ You want the files to be named:
 Where `"Columbia Tower"` is a text node, that you can locate with a CSS selector:
 
     'building Contact alt_building_name'
+
+
+##Solution:
 
 Run the script:
 
