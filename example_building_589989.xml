@@ -26,32 +26,30 @@
   <Owner>Beacon Capital</Owner>
   <Height>
     <architectural>
-     <metric>294.8m</metric>
-     <english>(967 ft)</english>
-   </architectural>
-   <architectural>
-     <metric>294.8m</metric>
-     <english>967 ft</english>
-   </architectural>
-   <roof>
+      <metric>294.8m</metric>
+      <english>(967 ft)</english>
+    </architectural>
+    <architectural>
+      <metric>294.8m</metric>
+      <english>967 ft</english>
+    </architectural>
     <roof>
-     <metric>284.2m</metric>
-     <english>932 ft</english>
-   </roof>
-   <observatory>
-     <metric>275m</metric>
-     <english>902 ft</english>
-   </observatory>
-   <floor_count>70</floor_count>
- </Height>
- <Design_and_Construction>
-  <architect>Chester Lindsey Architects</architect>
-  <developer>Martin Selig</developer>
-  <structural_engineer>
-    Magnusson Klemencic Associates (formerly Skilling Helle Christiansen Robertson)
-  </structural_engineer>
-  <main_contractor>Howard S. Wright Construction</main_contractor>
-</Design_and_Construction>
-<source>http://en.wikipedia.org/wiki/Columbia_Center</source>
-
+      <metric>284.2m</metric>
+      <english>932 ft</english>
+    </roof>
+    <observatory>
+      <metric>275m</metric>
+      <english>902 ft</english>
+    </observatory>
+    <floor_count>70</floor_count>
+  </Height>
+  <Design_and_Construction>
+    <architect>Chester Lindsey Architects</architect>
+    <developer>Martin Selig</developer>
+    <structural_engineer>
+      Magnusson Klemencic Associates (formerly Skilling Helle Christiansen Robertson)
+    </structural_engineer>
+    <main_contractor>Howard S. Wright Construction</main_contractor>
+  </Design_and_Construction>
+  <source>http://en.wikipedia.org/wiki/Columbia_Center</source>
 </building>
