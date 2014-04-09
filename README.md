@@ -17,5 +17,6 @@ Where `"Columbia Tower"` is a text node, that you can locate with a CSS selector
 
     'building Contact alt_building_name'
 
-`$ ruby rename_xml_files_by_content.rb '/Users/sealocal/Documents/world_buildings/building_589989.xml' 'building Contact alt_building_name'`
-
+    $ ruby rename_xml_files_by_content.rb \ 
+    '/Users/sealocal/Documents/world_buildings/building_589989.xml' \
+    'building Contact alt_building_name' 
