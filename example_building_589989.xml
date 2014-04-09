@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<building>
+  <mls_id>589989</mls_id>
+  <Contact>
+    <location>
+      <street>701 5th Ave # 7500</street>
+      <city>Seattle</city>
+      <county>King</countY>
+      <state>WA</state>
+      <ZIP>98104</ZIP>
+      <country>United States</country>
+    </location>
+    <phone_number>206-622-2010</phone_number>
+  </Contact>
+  <Type>Commercial offices</Type>
+  <Coordinates>
+    <lat>47.60453°N</lat>
+    <long>122.33069°W</long>
+  </Coordinates>
+  <Construction>
+    <start>1971</start>
+    <complete>January 12, 1980</complete>
+  </Construction>
+  <Opening>March 2, 1982</Opening>
+  <Cost>US$ 76 million</Cost>
+  <Owner>Beacon Capital</Owner>
+  <Height>
+    <architectural>
+     <metric>294.8m</metric>
+     <english>(967 ft)</english>
+   </architectural>
+   <architectural>
+     <metric>294.8m</metric>
+     <english>967 ft</english>
+   </architectural>
+   <roof>
+    <roof>
+     <metric>284.2m</metric>
+     <english>932 ft</english>
+   </roof>
+   <observatory>
+     <metric>275m</metric>
+     <english>902 ft</english>
+   </observatory>
+   <floor_count>70</floor_count>
+ </Height>
+ <Design_and_Construction>
+  <architect>Chester Lindsey Architects</architect>
+  <developer>Martin Selig</developer>
+  <structural_engineer>
+    Magnusson Klemencic Associates (formerly Skilling Helle Christiansen Robertson)
+  </structural_engineer>
+  <main_contractor>Howard S. Wright Construction</main_contractor>
+</Design_and_Construction>
+<source>http://en.wikipedia.org/wiki/Columbia_Center</source>
+
+</building>
