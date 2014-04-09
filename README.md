@@ -5,27 +5,48 @@ This is a Ruby script that allows you to rename your XML files based on content 
 
 ##Use Case Scenario:
 
-You have multiple files named like:
+####You have multiple files named like:
 
     building_589989.xml, building_589990.xml, building_589991.xml
 
-You want the files to be named:
+####You want the files to be named:
 	
     Columbia Tower.xml, Space Needle.xml, Premiere on Pine.xml
 
-Where `"Columbia Tower"` is a text node, that you can locate with a CSS selector:
+####Where `"Columbia Tower"` is a text node, that you can locate with a CSS selector:
 
     'building Contact alt_building_name'
 
 
 ##Solution:
 
-Run the script:
+###Run the script:
 
-	$ruby rename_xml_files_by_content.rb '<source_data.xml' '<css_selector>'
+	$ ruby rename_xml_files_by_content.rb '<source_data>' '<css_selector>'
 
-Example:
+###Example:
 
     $ ruby rename_xml_files_by_content.rb \ 
     '/Users/sealocal/Documents/world_buildings/building_589989.xml' \
-    'building Contact alt_building_name' 
+    'building Contact alt_building_name'
+    
+###Output:
+	
+    **** XML File: example_building_589989.xml
+	**** Origin Directory: .
+	**** XML Query by CSS: Columbia Tower
+	**** New File Name: Columbia Tower
+	**** Export Directory: ./export_folder
+
+
+####Notes:
+ 
+  1. <source_data> can have any file extension, as long as it contains XML.
+  
+  2. <source_data> can be a relative or absolute path to an XML file.
+  
+  3. The output will be saved to an `export_folder`, until this project is otherwise updated.
+  
+  
+##Contribute:
+Please [STAR](https://github.com/sealocal/rename-xml-files-by-content/star), [FORK](https://github.com/sealocal/rename-xml-files-by-content/fork), or create a new [ISSUE](https://github.com/sealocal/rename-xml-files-by-content/issues/new) if you would like to see this project developed further. We can even rename the project when appropriate!
