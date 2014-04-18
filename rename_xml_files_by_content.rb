@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'fileutils'
 
-class FileRenamer
+class XMLFileRenamer
   attr_reader :source_xml_file, :css_selector, :xml_document,
       :origin_directory, :export_directory, :new_file_name
 
@@ -48,7 +48,7 @@ css_selector = ARGV[1]
 # Example call from console:
 # $ ruby rename_xml_files_by_content.rb example_building_589989.xml 'building Contact alt_building_name'
 if (!File.directory? source_data) && (File.exist? source_data)
-  file_renamer = FileRenamer.new(source_data, css_selector)
+  file_renamer = XMLFileRenamer.new(source_data, css_selector)
   file_renamer.open_xml_file
   file_renamer.query_xml_file
   file_renamer.export_xml_file
@@ -58,7 +58,7 @@ if File.directory? source_data
   Dir.chdir(source_data) do
     all_regular_files_in_directory = Dir.glob('*.*')
     all_regular_files_in_directory.each do |file_name|
-      file_renamer = FileRenamer.new(file_name, css_selector)
+      file_renamer = XMLFileRenamer.new(file_name, css_selector)
       file_renamer.open_xml_file
       file_renamer.query_xml_file
       file_renamer.export_xml_file
