@@ -32,11 +32,11 @@ This is a Ruby script that allows you to rename your XML files based on content 
 
 ###Output:
 
-  **** XML File: example_building_589989.xml
-	**** Origin Directory: .
-	**** XML Query by CSS: Columbia Tower
-	**** New File Name: Columbia Tower
-	**** Export Directory: ./export_folder
+    **** XML File: example_building_589989.xml
+    **** Origin Directory: .
+    **** XML Query by CSS: Columbia Tower
+    **** New File Name: Columbia Tower
+    **** Export Directory: ./export_folder
 
 
 ####Notes:
