@@ -51,4 +51,4 @@ This is a Ruby script that allows you to rename your XML files based on content 
 
 
 ##Contribute:
-Please STAR, [FORK](https://github.com/sealocal/rename-xml-files-by-content/fork), or create a new [ISSUE](https://github.com/sealocal/rename-xml-files-by-content/issues/new) if you would like to see this project developed further. We can even rename the project when appropriate!
+Please STAR, [FORK](https://github.com/sealocal/xml_file_renamer/fork), or create a new [ISSUE](https://github.com/sealocal/xml_file_renamer/issues/new) if you would like to see this project developed further. We can even rename the project when appropriate!
