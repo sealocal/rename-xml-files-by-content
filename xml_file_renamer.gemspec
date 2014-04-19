@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name         =  'xml_file_renamer'
-  s.version      =  '0.0.2'
+  s.version      =  '0.0.3'
   s.add_runtime_dependency "nokogiri", ["= 1.6.1"]
   s.executables  << 'xml_file_renamer'
   s.date         =  '2014-04-18'
@@ -8,7 +8,8 @@ Gem::Specification.new do |s|
   s.description  =  "A Ruby class for renaming xml files based on content inside the XML."
   s.authors      =  ["Mike Taylor"]
   s.email        =  'local.mat@gmail.com'
-  s.files        =  Dir["{lib}/**/*.rb", "LICENSE", "*.md", "example_building_589989.xml"]
+  s.files        =  Dir["bin/*", "{example_xml_files}/*.xml", "{lib}/**/*.rb",
+                    "LICENSE", "README.md"]
   s.homepage     =  'https://github.com/sealocal/xml_file_renamer'
   s.license      =  'MIT'
 end

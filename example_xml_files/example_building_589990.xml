@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<building>
+  <mls_id>589990</mls_id>
+  <Contact>
+    <location>
+      <street>400 Broad Street</street>
+      <city>Seattle</city>
+      <county>King</countY>
+      <state>WA</state>
+      <ZIP>98109</ZIP>
+      <country>United States</country>
+    </location>
+    <building_name>
+      Space Needle
+    </building_name>
+    <alt_building_name>
+      none
+    </alt_building_name>
+    <phone_number>206-905-2100</phone_number>
+  </Contact>
+  <Type>Observation tower</Type>
+  <Coordinates>
+    <lat>47.6204°N</lat>
+    <long>122.3491°W</long>
+  </Coordinates>
+  <Construction>
+    <start>April 17, 1961</start>
+    <complete>December 8, 1961</complete>
+  </Construction>
+  <Opening>April 21, 1962</Opening>
+  <Cost>US$ 4.5 million</Cost>
+  <Owner>Space Needle Corporation</Owner>
+  <Height>
+    <antenna_spire>
+      <metric>184.41m</metric>
+      <english>605.0 ft</english>
+    </antenna_spire>
+    <top_floor>
+      <metric>158.12m</metric>
+      <english>518.8 ft</english>
+    </top_floor>
+    <floor_count>6</floor_count>
+  </Height>
+  <Design_and_Construction>
+    <architect>John Graham & Company</architect>
+    <developer>Pentagram Corporation</developer>
+    <structural_engineer>
+      John K. Minasian, Victor Steinbrueck
+    </structural_engineer>
+    <main_contractor>Howard S. Wright Construction</main_contractor>
+  </Design_and_Construction>
+  <source>http://en.wikipedia.org/wiki/Space_Needle</source>
+</building>
