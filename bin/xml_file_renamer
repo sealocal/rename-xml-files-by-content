@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'xml_file_renamer'
+XMLFileRenamer.new(ARGV[0], ARGV[1]).rename
