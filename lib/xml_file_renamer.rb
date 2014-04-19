@@ -1,6 +1,4 @@
 require 'nokogiri'
-require 'open-uri'
-require 'fileutils'
 
 class XMLFileRenamer
   attr_reader :source_data, :css_selector, :xml_document,
@@ -83,4 +81,3 @@ end
 
 # Checkout the public repo at:
 # https://github.com/sealocal/xml_file_renamer
-
