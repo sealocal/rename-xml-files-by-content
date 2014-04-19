@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'xml_file_renamer'
   s.version     = '0.0.0'
+  s.executables << 'xml_file_renamer'
   s.date        = '2014-04-18'
   s.summary     = "Rename XML files."
   s.description = "A Ruby class for renaming xml files based on content inside the XML."
