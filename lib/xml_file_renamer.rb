@@ -8,15 +8,24 @@ class XMLFileRenamer
   def initialize(source_data, css_selector)
     @source_data = source_data
     @css_selector = css_selector
+
+    set_origin_directory
+    set_export_directory
+  end
+
+  def print_origin_directory
+    puts '**** Origin Directory: ' + @origin_directory
+  end
+
+  def print_export_directory
+    puts '**** Export Directory: ' + @export_directory
+  end
+
+  def print_css_selector
+    puts '**** CSS selector: ' + @css_selector
   end
 
   def rename
-    set_origin_directory
-    print_origin_directory
-    set_export_directory
-    print_export_directory
-    print_css_selector
-
     if (!File.directory? @source_data) && (File.exist? @source_data)
       open_xml_file
       query_xml_file
@@ -45,26 +54,14 @@ class XMLFileRenamer
       end
     end
 
-    def print_origin_directory
-      puts '**** Origin Directory: ' + @origin_directory
-    end
-
-    def print_css_selector
-      puts '**** CSS selector: ' + @css_selector
-    end
-
     def set_export_directory
       # Specify export directory:
       @export_directory = @origin_directory + '/export_folder'
     end
 
-    def print_export_directory
-      puts '**** Export Directory: ' + @export_directory
-    end
-
     def open_xml_file
       # Read in the file and get new file name:
-      puts '**** Source File: ' + @source_data
+      puts '**** Source File: ' + File.expand_path(@source_data).split('/')[-1]
       @xml_document = Nokogiri::XML(open(@source_data))
     end
 
