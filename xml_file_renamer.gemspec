@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.authors      =  ["Mike Taylor"]
   s.email        =  'local.mat@gmail.com'
   s.files        =  ["lib/xml_file_renamer.rb"]
+  s.files        =  Dir["{lib}/**/*.rb", "LICENSE", "*.md", "example_building_589989.xml"]
   s.homepage     =  'https://github.com/sealocal/xml_file_renamer'
   s.license      =  'MIT'
 end
