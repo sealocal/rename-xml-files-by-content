@@ -1,6 +1,6 @@
 #xml_file_renamer
 
-This is a Ruby script that allows you to rename your XML files based on content inside the file.
+This is a Ruby class that allows you to rename your XML files based on content inside the file.
 
 
 ##Use Case Scenario:
@@ -22,21 +22,21 @@ This is a Ruby script that allows you to rename your XML files based on content 
 
 ###Run the script:
 
-	$ ruby xml_file_renamer.rb '<source_data>' '<css_selector>'
+	$ xml_file_renamer '<source_data>' '<css_selector>'
 
 ###Example:
 
-    $ ruby xml_file_renamer.rb \
+    $ xml_file_renamer
     '/Users/sealocal/Documents/world_buildings/building_589989.xml' \
     'building Contact alt_building_name'
 
 ###Output:
 
-    **** XML File: example_building_589989.xml
-    **** Origin Directory: .
-    **** XML Query by CSS: Columbia Tower
+    **** Origin Directory: /Users/sealocal/Documents/world_buildings
+    **** Export Directory: /Users/sealocal/Documents/world_buildings/export_folder
+    **** CSS selector: building Contact alt_building_name
+    **** Source File: example_building_589989.xml
     **** New File Name: Columbia Tower
-    **** Export Directory: ./export_folder
 
 
 ####Notes:
