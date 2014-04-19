@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<building>
+  <mls_id>589991</mls_id>
+  <Contact>
+    <location>
+      <street>815 Pine Street</street>
+      <city>Seattle</city>
+      <county>King</countY>
+      <state>WA</state>
+      <ZIP>98101</ZIP>
+      <country>United States</country>
+    </location>
+    <building_name>
+      Premier on Pine
+    </building_name>
+    <alt_building_name>
+      815 Pine
+    </alt_building_name>
+    <phone_number>TBD</phone_number>
+  </Contact>
+  <Type>Residential and Retail</Type>
+  <Coordinates>
+    <lat>47.6134°N</lat>
+    <long>122.3320°W</long>
+  </Coordinates>
+  <Construction>
+    <start>August 2012</start>
+    <complete>April 2015</complete>
+  </Construction>
+  <Opening>November 2014</Opening>
+  <Cost>TBD</Cost>
+  <Owner>Holland Partner Group</Owner>
+  <Height>
+    <overall>
+      <metric>440 ft</metric>
+      <english>134m</english>
+    </overall>
+    <floor_count>40</floor_count>
+  </Height>
+  <Design_and_Construction>
+    <architect>Weber Thompson</architect>
+    <developer>Holland Partner Group</developer>
+    <structural_engineer>
+      Cary Kopczynski & Company
+    </structural_engineer>
+    <main_contractor>Holland Construction</main_contractor>
+  </Design_and_Construction>
+  <source>http://www.815pineprogress.com</source>
+</building>

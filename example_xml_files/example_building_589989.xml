@@ -14,7 +14,7 @@
       Columbia Center
     </building_name>
     <alt_building_name>
-      Columbia Tower<
+      Columbia Tower
     </alt_building_name>
     <phone_number>206-622-2010</phone_number>
   </Contact>
@@ -31,10 +31,6 @@
   <Cost>US$ 76 million</Cost>
   <Owner>Beacon Capital</Owner>
   <Height>
-    <architectural>
-      <metric>294.8m</metric>
-      <english>(967 ft)</english>
-    </architectural>
     <architectural>
       <metric>294.8m</metric>
       <english>967 ft</english>
