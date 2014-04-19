@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
   s.name         =  'xml_file_renamer'
-  s.version      =  '0.0.0'
+  s.version      =  '0.0.1'
+  s.add_runtime_dependency "nokogiri", ["= 1.6.1"]
   s.executables  << 'xml_file_renamer'
   s.date         =  '2014-04-18'
   s.summary      =  "Rename XML files."
