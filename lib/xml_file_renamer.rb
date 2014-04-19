@@ -36,7 +36,13 @@ class XMLFileRenamer
 
   private
     def set_origin_directory
-      @origin_directory = Dir.pwd
+      if (!File.directory? @source_data) && (File.exist? @source_data)
+        @origin_directory = File.expand_path(File.dirname(@source_data))
+      end
+
+      if File.directory? @source_data
+        @origin_directory = @source_data
+      end
     end
 
     def print_origin_directory
