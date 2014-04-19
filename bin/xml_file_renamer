@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'xml_file_renamer'
-XMLFileRenamer.new(ARGV[0], ARGV[1]).rename
+xfr = XMLFileRenamer.new(ARGV[0], ARGV[1])
+xfr.print_origin_directory
+xfr.print_export_directory
+xfr.print_css_selector
+xfr.rename
