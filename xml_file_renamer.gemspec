@@ -8,7 +8,8 @@ Gem::Specification.new do |s|
   s.description  =  "A Ruby class for renaming xml files based on content inside the XML."
   s.authors      =  ["Mike Taylor"]
   s.email        =  'local.mat@gmail.com'
-  s.files        =  Dir["{lib}/**/*.rb", "LICENSE", "*.md", "example_building_589989.xml"]
+  s.files        =  Dir["bin/*", "{example_xml_files}/*.xml", "{lib}/**/*.rb",
+                    "LICENSE", "README.md"]
   s.homepage     =  'https://github.com/sealocal/xml_file_renamer'
   s.license      =  'MIT'
 end
