@@ -15,32 +15,38 @@ class XMLFileRenamer
 
   def print_origin_directory
     puts '**** Origin Directory: ' + @origin_directory
+    @origin_directory
   end
 
   def print_export_directory
     puts '**** Export Directory: ' + @export_directory
+    @export_directory
   end
 
   def print_css_selector
     puts '**** CSS selector: ' + @css_selector
+    @css_selector
   end
 
   def rename
-    if (!File.directory? @source_data) && (File.exist? @source_data)
+    new_file = if (!File.directory? @source_data) && (File.exist? @source_data)
       open_xml_file
       query_xml_file
       export_xml_file
     end
 
     if File.directory? @source_data
+      new_files = []
       Dir.chdir(@source_data) do
         all_regular_files_in_directory = Dir.glob('*.*')
         all_regular_files_in_directory.each do |file_name|
           xml_file_renamer = XMLFileRenamer.new(file_name, @css_selector)
-          xml_file_renamer.rename
+          new_files << xml_file_renamer.rename
         end
       end
     end
+
+    new_file || new_files
   end
 
   private
@@ -78,6 +84,7 @@ class XMLFileRenamer
 
       FileUtils.mkdir_p @export_directory
       FileUtils.copy_file(@source_data, @destination_file_name)
+      @new_file_name
     end
 end
 
