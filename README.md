@@ -34,7 +34,7 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
   Copy example XML files provided by the gem:
 
-    $ cp -r `which xml_file_renamer`/../../gems/xml_file_renamer-0.0.3/example_xml_files ~/Documents/example_xml_files
+    $ cp -r `which xml_file_renamer`/../../gems/xml_file_renamer-0.0.7/example_xml_files ~/Documents/example_xml_files
 
   Run the command on a single file:
 
