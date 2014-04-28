@@ -1,13 +1,14 @@
 require 'nokogiri'
 
 class XMLFileRenamer
-  attr_reader :source_data, :css_selector, :xml_document,
-      :origin_directory, :export_directory,
+  attr_reader :source_data, :css_selector, :case_option,
+      :xml_document, :origin_directory, :export_directory,
       :new_file_name, :destination_file_name
 
-  def initialize(source_data, css_selector)
+  def initialize(source_data, css_selector, case_option = nil)
     @source_data = source_data
     @css_selector = css_selector
+    @case_option = case_option
 
     set_origin_directory
     set_export_directory
@@ -75,6 +76,8 @@ class XMLFileRenamer
       xml_query_by_css = xml_document.css(css_selector)
 
       @new_file_name = xml_query_by_css.text.strip
+      @new_file_name = @new_file_name.downcase if case_option == 'lower'
+
       puts '**** New File Name: ' + new_file_name
     end
 
