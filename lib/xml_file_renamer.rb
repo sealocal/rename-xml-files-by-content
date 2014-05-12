@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'active_support/all'
 
 class XMLFileRenamer
   attr_reader :source_data, :css_selector, :case_option,
@@ -29,10 +30,21 @@ class XMLFileRenamer
     css_selector
   end
 
+  def print_case_option
+    puts '**** Case Option: ' + case_option if case_option != nil
+    case_option
+  end
+
+  def print_file_name
+    puts '**** New File Name: ' + new_file_name
+  end
+
+
   def rename
     new_file = if (!File.directory? source_data) && (File.exist? source_data)
       open_xml_file
       query_xml_file
+      convert_case
       export_xml_file
     end
 
@@ -41,7 +53,7 @@ class XMLFileRenamer
       Dir.chdir(source_data) do
         all_regular_files_in_directory = Dir.glob('*.*')
         all_regular_files_in_directory.each do |file_name|
-          xml_file_renamer = XMLFileRenamer.new(file_name, css_selector)
+          xml_file_renamer = XMLFileRenamer.new(file_name, css_selector, case_option)
           new_files << xml_file_renamer.rename
         end
       end
@@ -74,11 +86,21 @@ class XMLFileRenamer
 
     def query_xml_file
       xml_query_by_css = xml_document.css(css_selector)
-
       @new_file_name = xml_query_by_css.text.strip
-      @new_file_name = @new_file_name.downcase if case_option == 'lower'
+    end
 
-      puts '**** New File Name: ' + new_file_name
+    def convert_case
+      @new_file_name = if case_option == 'lower_case'
+        @new_file_name.downcase
+      elsif case_option == 'upper_case'
+        @new_file_name.upcase
+      elsif case_option == 'title_case'
+        @new_file_name.titlecase
+      elsif case_option == 'camel_case'
+        @new_file_name.split.join.camelcase
+      elsif case_option == 'snake_case'
+        @new_file_name.titleize.split.join.underscore
+      end
     end
 
     #This method should be split into making a directory and exporting a file
