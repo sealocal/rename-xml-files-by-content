@@ -32,6 +32,22 @@ class XMLFileRenamerTest < Test::Unit::TestCase
     assert_equal 'building Contact building_name', xfr.print_css_selector
   end
 
+  def test_print_case_option_is_lower_case
+    source_data = './example_xml_files/example_building_589990.xml'
+    css_selector = 'building Contact building_name'
+    case_option = lower_case
+    xfr = XMLFileRenamer.new(source_data, css_selector, case_option)
+    assert_equal 'space needle', xfr.print_case_option
+  end
+
+  def test_print_case_option_is_upper_case
+    source_data = './example_xml_files/example_building_589990.xml'
+    css_selector = 'building Contact building_name'
+    case_option = lower_case
+    xfr = XMLFileRenamer.new(source_data, css_selector, case_option)
+    assert_equal 'SPACE NEEDLE', xfr.print_case_option
+  end
+
   def test_rename_single_file
     source_data = './example_xml_files/example_building_589990.xml'
     css_selector = 'building Contact building_name'

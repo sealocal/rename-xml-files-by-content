@@ -25,3 +25,5 @@
 # .ruby-version
 # .ruby-gemset
 
+Ignore any converted examples:
+/example_xml_files/export_folder/*
