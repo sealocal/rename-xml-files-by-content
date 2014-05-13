@@ -28,13 +28,13 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
 ###Run the command:
 
-	$ xml_file_renamer '<source_data>' '<css_selector>'
+	  $ xml_file_renamer '<source_data>' '<css_selector>' [<case>]
 
 ###Examples:
 
   Copy example XML files provided by the gem:
 
-    $ cp -r `which xml_file_renamer`/../../gems/xml_file_renamer-0.0.7/example_xml_files ~/Documents/example_xml_files
+    $ cp -r `which xml_file_renamer`/../../gems/xml_file_renamer-0.0.8/example_xml_files ~/Documents/example_xml_files
 
   Run the command on a single file:
 
@@ -66,6 +66,20 @@ This is a Ruby class that allows you to rename your XML files based on content i
     **** Source File: example_building_589991.xml
     **** New File Name: Premier on Pine
 
+
+  Case Option:
+
+  Case options will convert the case of the new string:
+
+    $ xml_file_renamer building.xml 'building Contact building_name' lower_case
+
+  These are valid options:
+
+    lower_case  #=> 'space needle.xml'
+    upper_case  #=> 'SPACE NEEDLE.xml'
+    title_case  #=> 'Space Needle.xml'
+    camel_case  #=> 'SpaceNeedle.xml'
+    snake_case  #=> 'space_needle.xml'
 
 ####Notes:
 
