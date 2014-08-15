@@ -100,6 +100,8 @@ class XMLFileRenamer
         @new_file_name.split.join.camelcase
       elsif case_option == 'snake_case'
         @new_file_name.titleize.split.join.underscore
+      else
+        @new_file_name
       end
     end
 
