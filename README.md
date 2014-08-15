@@ -13,7 +13,7 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
     Columbia Tower.xml, Space Needle.xml, Premiere on Pine.xml
 
-####Where `"Columbia Tower"` is a text node, that you can locate with a CSS selector:
+####Where `"Columbia Tower"` is a text node, that you can locate by traversing tag names:
 
     'building Contact building_name'
 
@@ -28,7 +28,7 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
 ###Run the command:
 
-	  $ xml_file_renamer '<source_data>' '<css_selector>' [<case>]
+	  $ xml_file_renamer '<source_data>' '<tag_names>' [<case>]
 
 ###Examples:
 
@@ -46,7 +46,7 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
     **** Origin Directory: /Users/sealocal/Documents/example_xml_files
     **** Export Directory: /Users/sealocal/Documents/example_xml_files/export_folder
-    **** CSS selector: building Contact building_name
+    **** Tag Names: building Contact building_name
     **** Source File: example_building_589989.xml
     **** New File Name: Columbia Center
 
@@ -58,13 +58,13 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
     **** Origin Directory: /Users/sealocal/Documents/example_xml_files
     **** Export Directory: /Users/sealocal/Documents/example_xml_files/export_folder
-    **** CSS selector: building Contact building_name
+    **** Tag Names: building Contact building_name
     **** Source File: example_building_589989.xml
     **** New File Name: Columbia Center
     **** Source File: example_building_589990.xml
     **** New File Name: Space Needle
     **** Source File: example_building_589991.xml
-    **** New File Name: Premier on Pine
+    **** New File Name: Premiere on Pine
 
 
   Case Option:
@@ -83,7 +83,7 @@ This is a Ruby class that allows you to rename your XML files based on content i
 
 ####Notes:
 
-  1. <source_data> must contain an XML tree, with a match for your CSS selector.
+  1. <source_data> must contain an XML tree, with a match for your tag names.
 
   2. <source_data> can have ANY file extension. As long as it HAS a file extension,
       this utility will find your file an rename it.
