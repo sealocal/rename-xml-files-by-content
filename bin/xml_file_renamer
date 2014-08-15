@@ -4,6 +4,6 @@ require 'xml_file_renamer'
 xfr = XMLFileRenamer.new(ARGV[0], ARGV[1], ARGV[2])
 xfr.print_origin_directory
 xfr.print_export_directory
-xfr.print_css_selector
+xfr.print_tag_names
 xfr.print_case_option
 xfr.rename

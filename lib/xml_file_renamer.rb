@@ -2,13 +2,13 @@ require 'nokogiri'
 require 'active_support/all'
 
 class XMLFileRenamer
-  attr_reader :source_data, :css_selector, :case_option,
+  attr_reader :source_data, :tag_names, :case_option,
       :xml_document, :origin_directory, :export_directory,
       :new_file_name, :destination_file_name
 
-  def initialize(source_data, css_selector, case_option = nil)
+  def initialize(source_data, tag_names, case_option = nil)
     @source_data = source_data
-    @css_selector = css_selector
+    @tag_names = tag_names
     @case_option = case_option
 
     set_origin_directory
@@ -25,9 +25,9 @@ class XMLFileRenamer
     export_directory
   end
 
-  def print_css_selector
-    puts '**** CSS selector: ' + css_selector
-    css_selector
+  def print_tag_names
+    puts '**** Tag Names: ' + tag_names
+    tag_names
   end
 
   def print_case_option
@@ -53,7 +53,7 @@ class XMLFileRenamer
       Dir.chdir(source_data) do
         all_regular_files_in_directory = Dir.glob('*.*')
         all_regular_files_in_directory.each do |file_name|
-          xml_file_renamer = XMLFileRenamer.new(file_name, css_selector, case_option)
+          xml_file_renamer = XMLFileRenamer.new(file_name, tag_names, case_option)
           new_files << xml_file_renamer.rename
         end
       end
@@ -85,8 +85,8 @@ class XMLFileRenamer
     end
 
     def query_xml_file
-      xml_query_by_css = xml_document.css(css_selector)
-      @new_file_name = xml_query_by_css.text.strip
+      xml_query_by_tag_names = xml_document.css(tag_names)
+      @new_file_name = xml_query_by_tag_names.text.strip
     end
 
     def convert_case
